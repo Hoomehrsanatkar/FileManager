@@ -1,0 +1,205 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap');
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+  overflow-wrap: anywhere;
+  scroll-behavior: smooth !important;
+}
+
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0,0,0,0.1);
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(0,0,0,0.7);
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgb(0,0,0,0.9);
+}
+
+
+body {
+	font-size: 14px;
+	font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+main .row-1 {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	height: 70vh;
+	margin: 100px auto;
+	width: 80%;
+	box-shadow: 0 0 10px rgb(0,0,0,0.3);
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+main .row-1 .col-left {
+	width: 20%;
+	border-right: 2px solid rgb(0,0,0,0.2);
+	background-color: whitesmoke;
+	padding: 10px 15px;
+}
+
+main .row-1 .col-left > h2 {
+	color: rgb(0,0,0,0.7);
+}
+
+main .row-1 .col-left .folders {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-height: 60vh;
+	overflow: auto;
+}
+
+main .row-1 .col-left .folders .folder {
+	transition: all 0.2s;
+	padding: 10px;
+	width: 100%;
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+	color: #242424;
+}
+
+main .row-1 .col-left .folders .folder:hover {
+	transition: all 0.2s;
+	opacity: 0.6;
+}
+
+main .row-1 .col-right {
+	position: relative;
+	width: 80%;
+	background: white;
+}
+
+main .row-1 .col-right .toolbar {
+	height: 55px;
+	border-bottom: 2px solid rgb(0,0,0,0.1);
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+	background: white;
+	box-shadow: 0 1px 5px rgb(0,0,0,0.1);
+}
+
+main .row-1 .col-right .toolbar .btn {
+	transition: all 0.2s;
+	padding: 10px;
+	background: #242424;
+	margin: 0 5px;
+	border-radius: 3px;
+	color: white;
+}
+main .row-1 .col-right .toolbar .btn:hover {
+	transition: all 0.2s;
+	opacity: 70%;
+}
+
+main .row-1 .col-right .files {
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	grid-row-gap: 20px;
+	padding: 10px 0px;
+	max-height: 54vh;
+	overflow: auto;
+}
+
+main .row-1 .col-right .files .file {
+	transition: all 0.2s;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 4px;
+	font-size: 0.9rem;
+	font-weight: 500;
+	cursor: pointer;
+	max-width: 200px;
+	text-align: center;
+}
+
+main .row-1 .col-right .files .file.selected {
+	transition: all 0.2s;
+	background-color: rgb(0,0,0,0.1);
+}
+
+main .row-1 .col-right .files .file:hover {
+	transition: all 0.2s;
+	opacity: 0.7;
+}
+
+main .row-1 .col-right .files .file i {
+	font-size: 2rem;
+}
+
+main .row-1 .col-right .status {
+	position: absolute;
+	bottom: 0;
+	height: 55px;
+	background: #242424;
+	width: 100%;
+	color: whitesmoke;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 15px;
+}
+
+main .row-1 .col-right .status i {
+	font-size: 1.4rem;
+}
+
+main .row-1 .col-right .status .storage {
+	display: flex;
+	align-items: center;
+	grid-gap: 10px;
+}
+
+main .row-1 .col-right .status .storage .space {
+	position: relative;
+	height: 17px;
+	width: 150px;
+	border-radius: 2px;
+	background: red;
+	font-size: 0.9rem;
+	padding: 13px 0;
+	color: #242424;
+	justify-content: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	overflow: hidden;
+}
+
+main .row-1 .col-right .status .storage .space span {
+	position: relative;
+	z-index: 1;
+}
+
+main .row-1 .col-right .status .storage .space .bar {
+	position: absolute;
+	background-color: whitesmoke;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 0;
+}

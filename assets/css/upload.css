@@ -1,0 +1,51 @@
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+main form {
+  display: grid;
+  grid-gap: 20px;
+}
+
+
+main form .upload-box {
+  padding: 70px 100px;
+  border: 2px dashed #242424;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+main form button {
+  background-color: white;
+  box-shadow: 0 2px 7px rgb(0,0,0,0.3);
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+main form button:hover {
+  transition: all 0.2s;
+  box-shadow: 0 2px 3px rgb(0,0,0,0.3);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
